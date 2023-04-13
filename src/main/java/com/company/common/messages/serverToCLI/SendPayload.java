@@ -10,7 +10,7 @@ import java.util.Map;
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString(callSuper = true)
-public class ClientIdAndPayloadsIds extends BaseServerToCLI {
+public class SendPayload extends BaseServerToCLI {
 
-    private Map<String, String> clientAndPayloads = new HashMap<>();
+    private Map<Long, String> clientIdToAck = new HashMap<>();
 }

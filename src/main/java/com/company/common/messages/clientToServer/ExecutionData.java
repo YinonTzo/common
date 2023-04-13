@@ -1,9 +1,7 @@
 package com.company.common.messages.clientToServer;
 
 import com.company.common.statuses.ExecutionStatus;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import java.io.Serializable;
 import java.util.Base64;
@@ -11,7 +9,9 @@ import java.util.Base64;
 @Getter
 @Setter
 @AllArgsConstructor
+@NoArgsConstructor
 public class ExecutionData implements Serializable {
+
     private int messageId;
     private ExecutionStatus status;
     private String result = "";
@@ -26,7 +26,7 @@ public class ExecutionData implements Serializable {
     }
 
     private String getResultAsString() {
-        String decodedResult = result;
+        String decodedResult;
         try {
             decodedResult = new String(Base64.getDecoder().decode(result));
         } catch (IllegalArgumentException e) {

@@ -14,7 +14,7 @@ import java.util.Map;
 @Setter
 @NoArgsConstructor
 @ToString(callSuper = true)
-public class CommandResults extends BaseServerToCLI{
+public class CommandResults extends BaseServerToCLI {
 
     private Map<Integer, List<ExecutionData>> payloadIdToResult = new HashMap<>();
 }

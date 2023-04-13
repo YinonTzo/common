@@ -12,7 +12,7 @@ import java.util.Map;
 @Setter
 @NoArgsConstructor
 @ToString(callSuper = true)
-public class ClientsAndStatuses extends BaseServerToCLI{
+public class ClientsAndStatuses extends BaseServerToCLI {
 
-    private Map<Integer, ClientAndServerStatus> clientsAndStatuses;
+    private Map<Long, ClientAndServerStatus> clientsAndStatuses;
 }
